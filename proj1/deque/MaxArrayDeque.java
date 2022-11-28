@@ -4,7 +4,9 @@ import java.util.Comparator;
 
 public class MaxArrayDeque<T> extends ArrayDeque<T> {
 
-    /** The default Comparator. */
+    /**
+     * The default Comparator.
+     */
     private final Comparator<T> c;
 
     /**
@@ -24,12 +26,12 @@ public class MaxArrayDeque<T> extends ArrayDeque<T> {
 
     /**
      * Returns the maximum element in the deque as governed by the parameter
-     * Comparator c. If the MaxArrayDeque is empty, simply return null.
+     * comparator. If the MaxArrayDeque is empty, simply return null.
      */
-    public T max(Comparator<T> c) {
+    public T max(Comparator<T> comparator) {
         T maxItem = null;
         for (T item : this) {
-            if (maxItem == null || c.compare(item, maxItem) > 0) {
+            if (maxItem == null || comparator.compare(item, maxItem) > 0) {
                 maxItem = item;
             }
         }
