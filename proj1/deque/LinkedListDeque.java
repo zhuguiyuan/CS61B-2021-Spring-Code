@@ -51,17 +51,12 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
 
     @Override
     public void printDeque() {
-        System.out.println(toString());
-    }
-
-    @Override
-    public String toString() {
         String[] result = new String[size()];
         int idx = 0;
         for (T item : this) {
             result[idx++] = item.toString();
         }
-        return String.join(" ", result);
+        System.out.println(String.join(" ", result));
     }
 
     @Override

@@ -228,17 +228,6 @@ public class LinkedListDequeTest {
         assertNull(lld.getRecursive(10));
     }
 
-    /* Test toString method. */
-    @Test
-    public void toStringTest() {
-        LinkedListDeque<Integer> lld = new LinkedListDeque<>();
-        assertEquals("", lld.toString());
-        lld.addFirst(3);
-        assertEquals("3", lld.toString());
-        lld.addFirst(7);
-        assertEquals("7 3", lld.toString());
-    }
-
     /* Test equal method. */
     @Test
     public void equalityTest() {

@@ -60,17 +60,6 @@ public class ArrayDequeTest {
         assertEquals(0, ad.size());
     }
 
-    /* Test toString method. */
-    @Test
-    public void toStringTest() {
-        ArrayDeque<Integer> ad = new ArrayDeque<>();
-        assertEquals("", ad.toString());
-        ad.addFirst(3);
-        assertEquals("3", ad.toString());
-        ad.addFirst(7);
-        assertEquals("7 3", ad.toString());
-    }
-
     @Test
     /* Randomized test for size, isEmpty, addFirst, addLast,
        removeFirst, removeLast, get, and getIterator. */
